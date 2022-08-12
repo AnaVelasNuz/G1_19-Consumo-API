@@ -27,7 +27,7 @@ function CargarAsignaturas(){
                 '<td>'+ MiItem[i].PromedioAprobacion +'</td>'+
                 '<td>'+ MiItem[i].NumeroEdificio +'</td>'+
                 '<td>'+
-                '<button class="btn btn-info" onclick="CargarAsignatura(\''+MiItem[i].CodigoAsignatura.toString()+'\')">Editar</button>'+
+                '<button class="btn btn-info" onclick="CargarAsignatura(\''+MiItem[i].CodigoAsignatura.toString()+'\')"> Editar</button>'+
                 '</td>'+
                 '<td>'+
                 `<button class="btn btn-danger" onclick="EliminarAsignatura('${MiItem[i].CodigoAsignatura}')">Eliminar</button>`+
@@ -50,7 +50,7 @@ function AgregarAsignatura(){
         NumeroEdificio: $('#NumeroEdificio').val()
     };
     var datosasignaturajson = JSON.stringify(datosasignatura);
-    //console.log('hola');
+   
     $.ajax({
         url: UrlInsertAsignatura,
         type: 'POST',
